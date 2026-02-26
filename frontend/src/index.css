@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Background & Foreground */
+    --background: 0.98 0.005 85;
+    --foreground: 0.18 0.02 260;
+
+    /* Card */
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 260;
+
+    /* Popover */
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 260;
+
+    /* Primary — deep charcoal */
+    --primary: 0.22 0.025 260;
+    --primary-foreground: 0.98 0.005 85;
+
+    /* Secondary — warm cream */
+    --secondary: 0.94 0.03 85;
+    --secondary-foreground: 0.22 0.025 260;
+
+    /* Muted */
+    --muted: 0.93 0.015 85;
+    --muted-foreground: 0.5 0.02 260;
+
+    /* Accent — warm amber */
+    --accent: 0.75 0.18 65;
+    --accent-foreground: 0.12 0.02 260;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border / Input / Ring */
+    --border: 0.88 0.02 85;
+    --input: 0.88 0.02 85;
+    --ring: 0.75 0.18 65;
+
+    /* Charts */
+    --chart-1: 0.75 0.18 65;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+
+    /* Sidebar */
+    --sidebar: 0.22 0.025 260;
+    --sidebar-foreground: 0.98 0.005 85;
+    --sidebar-primary: 0.75 0.18 65;
+    --sidebar-primary-foreground: 0.12 0.02 260;
+    --sidebar-accent: 0.3 0.03 260;
+    --sidebar-accent-foreground: 0.98 0.005 85;
+    --sidebar-border: 0.3 0.03 260;
+    --sidebar-ring: 0.75 0.18 65;
+
+    /* Custom tokens */
+    --amber: 0.75 0.18 65;
+    --amber-light: 0.88 0.14 75;
+    --amber-dark: 0.58 0.2 55;
+    --charcoal: 0.22 0.025 260;
+    --charcoal-light: 0.32 0.025 260;
+  }
+
+  .dark {
+    --background: 0.14 0.02 260;
+    --foreground: 0.95 0.01 85;
+    --card: 0.2 0.025 260;
+    --card-foreground: 0.95 0.01 85;
+    --popover: 0.2 0.025 260;
+    --popover-foreground: 0.95 0.01 85;
+    --primary: 0.75 0.18 65;
+    --primary-foreground: 0.12 0.02 260;
+    --secondary: 0.28 0.03 260;
+    --secondary-foreground: 0.95 0.01 85;
+    --muted: 0.28 0.03 260;
+    --muted-foreground: 0.65 0.02 260;
+    --accent: 0.75 0.18 65;
+    --accent-foreground: 0.12 0.02 260;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.75 0.18 65;
+    --sidebar: 0.18 0.025 260;
+    --sidebar-foreground: 0.95 0.01 85;
+    --sidebar-primary: 0.75 0.18 65;
+    --sidebar-primary-foreground: 0.12 0.02 260;
+    --sidebar-accent: 0.28 0.03 260;
+    --sidebar-accent-foreground: 0.95 0.01 85;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.75 0.18 65;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .course-card {
+    @apply bg-card rounded-xl overflow-hidden shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .btn-amber {
+    @apply bg-amber text-charcoal font-semibold px-6 py-3 rounded-lg hover:bg-amber-dark transition-colors duration-200;
+  }
+
+  .section-heading {
+    @apply font-serif font-bold text-charcoal;
+  }
+}

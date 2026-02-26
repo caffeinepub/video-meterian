@@ -1,0 +1,130 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T16:46:48.140Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 6,
+    "implemented": 5,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Update the website name to 'Odisha Exam' and the tagline to 'Video Materials and PDFs' across all pages, including the Navbar logo/brand text, page title in index.html, Footer brand section, and any other location where the site name or tagline appears.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/index.html",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Remove the stats/counters section from the HomePage that displays values such as '500+', '50+', '20k+', and '4.9 rating'. This entire block should be deleted from the page without leaving empty space.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HomePage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HomePage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Remove 'Science' and 'Technology' as subjects/categories from the Course section, subject navigation, course cards, sidebar filters, Footer category links, and any other place these categories appear in the frontend.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/CoursesPage.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/Navbar.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/CoursesPage.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/Navbar.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add 'General Studies' as a subject/category with the following sub-subjects displayed within its section: History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity. Update all relevant frontend areas (CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, Navbar) to include 'General Studies' and show or link to its sub-subjects where appropriate.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/CoursesPage.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/Navbar.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/CoursesPage.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/Navbar.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Add 'English', 'Computer', and 'Logical Reasoning' as standalone subjects (no sub-topics) to all relevant frontend areas: CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, and Navbar subject navigation.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/CoursesPage.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/pages/admin/AdminPDFsPage.tsx",
+          "frontend/src/pages/admin/AdminVideosPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/HomePage.tsx",
+          "frontend/src/pages/CoursesPage.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/Navbar.tsx",
+          "frontend/src/pages/admin/AdminPDFsPage.tsx",
+          "frontend/src/pages/admin/AdminVideosPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Update the backend course category/subject data to remove 'Science' and 'Technology', and add 'General Studies', 'English', 'Computer', and 'Logical Reasoning' as valid categories so that admin forms, course creation, and filtering all reflect the new subject list.",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.html",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/CoursesPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/VideoPlayerPage.tsx",
+    "frontend/src/pages/admin/AdminPDFsPage.tsx",
+    "frontend/src/pages/admin/AdminVideosPage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-website-name-to-odisha-exam-and-the-tagline-to-video-materials-and-pdfs-across-all-pages-including-the-navbar-logo-brand-text-page-title-in-index-html-footer-brand-section-and-any-other-location-where-the-site-name-or-tagline-appears",
+      "featureTitle": "Update the website name to 'Odisha Exam' and the tagline to 'Video Materials and PDFs' across all pages, including the Navbar logo/brand text, page title in index.html, Footer brand section, and any other location where the site name or tagline appears.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-stats-counters-section-from-the-homepage-that-displays-values-such-as-500-50-20k-and-4-9-rating-this-entire-block-should-be-deleted-from-the-page-without-leaving-empty-space",
+      "featureTitle": "Remove the stats/counters section from the HomePage that displays values such as '500+', '50+', '20k+', and '4.9 rating'. This entire block should be deleted from the page without leaving empty space.",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-science-and-technology-as-subjects-categories-from-the-course-section-subject-navigation-course-cards-sidebar-filters-footer-category-links-and-any-other-place-these-categories-appear-in-the-frontend",
+      "featureTitle": "Remove 'Science' and 'Technology' as subjects/categories from the Course section, subject navigation, course cards, sidebar filters, Footer category links, and any other place these categories appear in the frontend.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/pages/CoursesPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-general-studies-as-a-subject-category-with-the-following-sub-subjects-displayed-within-its-section-history-of-odisha-geography-of-odisha-history-of-india-indian-geography-indian-polity-update-all-relevant-frontend-areas-coursespage-filters-subject-category-grid-on-homepage-sidebar-footer-category-links-navbar-to-include-general-studies-and-show-or-link-to-its-sub-subjects-where-appropriate",
+      "featureTitle": "Add 'General Studies' as a subject/category with the following sub-subjects displayed within its section: History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity. Update all relevant frontend areas (CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, Navbar) to include 'General Studies' and show or link to its sub-subjects where appropriate.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/pages/CoursesPage.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-english-computer-and-logical-reasoning-as-standalone-subjects-no-sub-topics-to-all-relevant-frontend-areas-coursespage-filters-subject-category-grid-on-homepage-sidebar-footer-category-links-and-navbar-subject-navigation",
+      "featureTitle": "Add 'English', 'Computer', and 'Logical Reasoning' as standalone subjects (no sub-topics) to all relevant frontend areas: CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, and Navbar subject navigation.",
+      "files": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/Navbar.tsx",
+        "frontend/src/pages/CoursesPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/admin/AdminPDFsPage.tsx",
+        "frontend/src/pages/admin/AdminVideosPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

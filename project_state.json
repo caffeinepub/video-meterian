@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Educational platform called 'Odisha Exam' focused on video materials and PDFs. Features a Course section with subjects including General Studies (with sub-subjects: History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity), English, Computer, and Logical Reasoning. Science and Technology subjects removed. Stats section removed from home page.",
+  "architectural_notes": [
+    "Subject structure: General Studies (sub-subjects: History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity), English, Computer, Logical Reasoning — Science and Technology removed",
+    "Site name: Odisha Exam; tagline: Video Materials and PDFs",
+    "Home page stats section (500+, 50+, 20k+, 4.9 rating) has been removed"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-update-the-website-name-to-odisha-exam-and-the-tagline-to-video-materials-and-pdfs-across-all-pages-including-the-navbar-logo-brand-text-page-title-in-index-html-footer-brand-section-and-any-other-location-where-the-site-name-or-tagline-appears",
+      "title": "Update the website name to 'Odisha Exam' and the tagline to 'Video Materials and PDFs' across all pages, including the Navbar logo/brand text, page title in index.html, Footer brand section, and any other location where the site name or tagline appears.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-stats-counters-section-from-the-homepage-that-displays-values-such-as-500-50-20k-and-4-9-rating-this-entire-block-should-be-deleted-from-the-page-without-leaving-empty-space",
+      "title": "Remove the stats/counters section from the HomePage that displays values such as '500+', '50+', '20k+', and '4.9 rating'. This entire block should be deleted from the page without leaving empty space.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-science-and-technology-as-subjects-categories-from-the-course-section-subject-navigation-course-cards-sidebar-filters-footer-category-links-and-any-other-place-these-categories-appear-in-the-frontend",
+      "title": "Remove 'Science' and 'Technology' as subjects/categories from the Course section, subject navigation, course cards, sidebar filters, Footer category links, and any other place these categories appear in the frontend.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-general-studies-as-a-subject-category-with-the-following-sub-subjects-displayed-within-its-section-history-of-odisha-geography-of-odisha-history-of-india-indian-geography-indian-polity-update-all-relevant-frontend-areas-coursespage-filters-subject-category-grid-on-homepage-sidebar-footer-category-links-navbar-to-include-general-studies-and-show-or-link-to-its-sub-subjects-where-appropriate",
+      "title": "Add 'General Studies' as a subject/category with the following sub-subjects displayed within its section: History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity. Update all relevant frontend areas (CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, Navbar) to include 'General Studies' and show or link to its sub-subjects where appropriate.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-english-computer-and-logical-reasoning-as-standalone-subjects-no-sub-topics-to-all-relevant-frontend-areas-coursespage-filters-subject-category-grid-on-homepage-sidebar-footer-category-links-and-navbar-subject-navigation",
+      "title": "Add 'English', 'Computer', and 'Logical Reasoning' as standalone subjects (no sub-topics) to all relevant frontend areas: CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, and Navbar subject navigation.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-6",
+      "summary": "Update the backend course category/subject data to remove 'Science' and 'Technology', and add 'General Studies', 'English', 'Computer', and 'Logical Reasoning' as valid categories so that admin forms, course creation, and filtering all reflect the new subject list.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Odisha Exam",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

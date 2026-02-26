@@ -1,0 +1,156 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Update site branding, remove stats section, and restructure course subjects",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update the website name to 'Odisha Exam' and the tagline to 'Video Materials and PDFs' across all pages",
+      "acceptanceCriteria": [
+        "The site name 'Odisha Exam' appears in the Navbar, Footer, and browser tab title.",
+        "The tagline 'Video Materials and PDFs' appears in the Navbar or hero area and the Footer brand section.",
+        "No old site name or tagline remains anywhere in the UI."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the <title> element to 'Odisha Exam - Video Materials and PDFs' to reflect the new site name and tagline in the browser tab."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Change the logo/brand text from 'Video Materials' to 'Odisha Exam' and ensure the tagline 'Video Materials and PDFs' appears either as a subtitle or in a nearby element within the navbar brand section."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Update the brand name in the Footer from 'Video Materials' to 'Odisha Exam' and add or update the tagline to 'Video Materials and PDFs' in the brand section of the footer."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Update any hero section heading or site name references to 'Odisha Exam' and ensure the tagline 'Video Materials and PDFs' appears in the hero area if applicable."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Remove the stats/counters section from the HomePage",
+      "acceptanceCriteria": [
+        "The stats bar (500+, 50+, 20k+, 4.9 rating) is no longer visible on the HomePage.",
+        "No empty container or whitespace gap remains where the stats section was.",
+        "All other HomePage sections remain intact."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Remove the entire stats/counters section that displays values such as '500+', '50+', '20k+', and '4.9 rating'. Delete the stats component or JSX block completely, ensuring no empty container or whitespace remains in its place."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Remove 'Science' and 'Technology' as subjects/categories from all frontend areas",
+      "acceptanceCriteria": [
+        "'Science' and 'Technology' no longer appear as filter options, category labels, or navigation items anywhere in the app.",
+        "Existing courses tagged with 'Science' or 'Technology' are either hidden or reassigned."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Remove 'Science' and 'Technology' from the subject categories section/grid displayed on the HomePage. Update any hardcoded category arrays or mappings to exclude these two categories."
+        },
+        {
+          "path": "frontend/src/pages/CoursesPage.tsx",
+          "operation": "modify",
+          "description": "Remove 'Science' and 'Technology' from the category filter dropdown or sidebar filter options. Update the filter logic to exclude these categories from the available options."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Remove 'Science' and 'Technology' from the category links section in the Footer. Delete or hide any navigation links pointing to these categories."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Remove 'Science' and 'Technology' from any subject navigation menus or dropdowns in the Navbar if they exist."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add 'General Studies' as a subject/category with five sub-subjects",
+      "acceptanceCriteria": [
+        "'General Studies' appears as a subject/category in navigation, course filters, the subject grid on HomePage, sidebar, and Footer.",
+        "Within the General Studies section or card, the five sub-subjects (History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity) are listed or linked.",
+        "Clicking 'General Studies' filters courses to that category."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add 'General Studies' to the subject categories grid on the HomePage. Create a card or section for 'General Studies' that lists or links to the five sub-subjects: History of Odisha, Geography of Odisha, History of India, Indian Geography, and Indian Polity. Ensure the category value matches the backend Category enum value 'generalStudies'."
+        },
+        {
+          "path": "frontend/src/pages/CoursesPage.tsx",
+          "operation": "modify",
+          "description": "Add 'General Studies' to the category filter options in the CoursesPage. Ensure selecting 'General Studies' filters courses to the 'generalStudies' category. If sub-subjects are displayed in the filter UI, include the five sub-subjects as visual labels or tags."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Add 'General Studies' to the category links section in the Footer. Optionally list or link to the five sub-subjects within or beneath the General Studies link."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Add 'General Studies' to any subject navigation menus or dropdowns in the Navbar. If a dropdown is used, include the five sub-subjects as nested items or display them on hover/click."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add 'English', 'Computer', and 'Logical Reasoning' as standalone subjects",
+      "acceptanceCriteria": [
+        "'English', 'Computer', and 'Logical Reasoning' appear as filter/category options in navigation, course filters, the subject grid on HomePage, sidebar, and Footer.",
+        "None of the three subjects show any sub-subject listing.",
+        "Clicking each subject filters the course catalog to that category."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Add 'English', 'Computer', and 'Logical Reasoning' to the subject categories grid on the HomePage. Create cards or sections for each subject without any sub-subject listings. Ensure category values match the backend Category enum values: 'english', 'computer', and 'logicalReasoning'."
+        },
+        {
+          "path": "frontend/src/pages/CoursesPage.tsx",
+          "operation": "modify",
+          "description": "Add 'English', 'Computer', and 'Logical Reasoning' to the category filter options in the CoursesPage. Ensure selecting each subject filters courses to the corresponding category ('english', 'computer', 'logicalReasoning'). Do not display any sub-subjects for these three categories."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Add 'English', 'Computer', and 'Logical Reasoning' to the category links section in the Footer. Display them as standalone links without any sub-subject listings."
+        },
+        {
+          "path": "frontend/src/components/Navbar.tsx",
+          "operation": "modify",
+          "description": "Add 'English', 'Computer', and 'Logical Reasoning' to any subject navigation menus or dropdowns in the Navbar. Do not include sub-subject items for these three categories."
+        },
+        {
+          "path": "frontend/src/pages/admin/AdminPDFsPage.tsx",
+          "operation": "modify",
+          "description": "Update the category dropdown in the PDF creation form to include 'English', 'Computer', and 'Logical Reasoning' as valid category options. Remove 'Science' and 'Technology' from the dropdown. Add 'General Studies' if not already present. Ensure the dropdown values match the backend Category enum."
+        },
+        {
+          "path": "frontend/src/pages/admin/AdminVideosPage.tsx",
+          "operation": "modify",
+          "description": "Update the category dropdown in the video course creation form to include 'English', 'Computer', and 'Logical Reasoning' as valid category options. Remove 'Science' and 'Technology' from the dropdown. Add 'General Studies' if not already present. Ensure the dropdown values match the backend Category enum."
+        }
+      ]
+    }
+  ]
+}

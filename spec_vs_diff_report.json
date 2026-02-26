@@ -1,0 +1,34 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-26T16:46:48.136Z",
+  "summary": "The diff implements nearly all requirements. REQ-1 through REQ-6 are substantially addressed: branding updated to 'Odisha Exam' with tagline 'Video Materials and PDFs' in Navbar, Footer, index.html, and hero; stats section removed from HomePage; Science/Technology removed from all frontend areas and backend; General Studies with five sub-subjects added; English, Computer, Logical Reasoning added as standalone subjects; backend Category enum updated. One minor gap: the Navbar does not appear to include a subject navigation dropdown or list for the new categories — the navLinks array only contains Home, Courses, About, Contact. However, this may be fulfilled indirectly via the Courses page link. Admin authentication was changed, which was explicitly listed as a non-goal.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Admin authentication credentials changed: username set to 'odishaexam' and password to 'Odishaexam_2026#', with separate username and password fields on the admin login page.",
+      "reason": "The build request explicitly lists 'Changing the admin authentication mechanism' as a non-goal. The diff modifies useAdminAuth.ts logic and AdminLoginPage.tsx to use new credentials and a separate username field, which was not requested.",
+      "evidence": [
+        "frontend-file-summaries.txt",
+        "frontend/src/hooks/useAdminAuth.ts",
+        "frontend/src/pages/admin/AdminLoginPage.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "backend/main.mo",
+    "backend/migration.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.html",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Navbar.tsx",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/CoursesPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/VideoPlayerPage.tsx",
+    "frontend/src/pages/admin/AdminPDFsPage.tsx",
+    "frontend/src/pages/admin/AdminVideosPage.tsx",
+    "project_state.json"
+  ]
+}

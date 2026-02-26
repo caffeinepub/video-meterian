@@ -1,0 +1,136 @@
+{
+  "kind": "build_request",
+  "title": "Update site branding, remove stats section, and restructure course subjects",
+  "projectName": "Odisha Exam",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the website name to 'Odisha Exam' and the tagline to 'Video Materials and PDFs' across all pages, including the Navbar logo/brand text, page title in index.html, Footer brand section, and any other location where the site name or tagline appears.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6",
+          "msg-7"
+        ],
+        "quotes": [
+          "change the website name - Odisha Exam, and add the tag line video materials and PDFs"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The site name 'Odisha Exam' appears in the Navbar, Footer, and browser tab title.",
+        "The tagline 'Video Materials and PDFs' appears in the Navbar or hero area and the Footer brand section.",
+        "No old site name or tagline remains anywhere in the UI."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Remove the stats/counters section from the HomePage that displays values such as '500+', '50+', '20k+', and '4.9 rating'. This entire block should be deleted from the page without leaving empty space.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-8",
+          "msg-9"
+        ],
+        "quotes": [
+          "const section means in home page the numbers are showing as - 500+, 50+, 20k+, and 4.9 ratting"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The stats bar (500+, 50+, 20k+, 4.9 rating) is no longer visible on the HomePage.",
+        "No empty container or whitespace gap remains where the stats section was.",
+        "All other HomePage sections remain intact."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Remove 'Science' and 'Technology' as subjects/categories from the Course section, subject navigation, course cards, sidebar filters, Footer category links, and any other place these categories appear in the frontend.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "remove 'science', 'technology' from the apps"
+        ]
+      },
+      "acceptanceCriteria": [
+        "'Science' and 'Technology' no longer appear as filter options, category labels, or navigation items anywhere in the app.",
+        "Existing courses tagged with 'Science' or 'Technology' are either hidden or reassigned."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add 'General Studies' as a subject/category with the following sub-subjects displayed within its section: History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity. Update all relevant frontend areas (CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, Navbar) to include 'General Studies' and show or link to its sub-subjects where appropriate.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6",
+          "msg-8"
+        ],
+        "quotes": [
+          "add 'General Studies' in subject section and under general studies section add some sub subjects- History of Odisha ,Geography of Odisha , History of India , Indian Geography , Indian Polity"
+        ]
+      },
+      "acceptanceCriteria": [
+        "'General Studies' appears as a subject/category in navigation, course filters, the subject grid on HomePage, sidebar, and Footer.",
+        "Within the General Studies section or card, the five sub-subjects (History of Odisha, Geography of Odisha, History of India, Indian Geography, Indian Polity) are listed or linked.",
+        "Clicking 'General Studies' filters courses to that category."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add 'English', 'Computer', and 'Logical Reasoning' as standalone subjects (no sub-topics) to all relevant frontend areas: CoursesPage filters, subject category grid on HomePage, sidebar, Footer category links, and Navbar subject navigation.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6",
+          "msg-8"
+        ],
+        "quotes": [
+          "please add 'English' ,'Computer', 'Logical Reasoning' as a subject",
+          "no nothing in sub subject of English, computer, and logical reasoning"
+        ]
+      },
+      "acceptanceCriteria": [
+        "'English', 'Computer', and 'Logical Reasoning' appear as filter/category options in navigation, course filters, the subject grid on HomePage, sidebar, and Footer.",
+        "None of the three subjects show any sub-subject listing.",
+        "Clicking each subject filters the course catalog to that category."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Update the backend course category/subject data to remove 'Science' and 'Technology', and add 'General Studies', 'English', 'Computer', and 'Logical Reasoning' as valid categories so that admin forms, course creation, and filtering all reflect the new subject list.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "remove 'science', 'technology' from the apps",
+          "add 'General Studies'",
+          "add 'English', 'Computer', 'Logical Reasoning' as a subject"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The backend actor's category/subject enum or list no longer contains 'Science' or 'Technology'.",
+        "'General Studies', 'English', 'Computer', and 'Logical Reasoning' are valid course categories in the backend.",
+        "Admin video/PDF forms reflect the updated category list."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or frontend/src/components/ui.",
+    "Preserve all existing pages and features not mentioned in this request."
+  ],
+  "nonGoals": [
+    "Adding sub-subjects to English, Computer, or Logical Reasoning.",
+    "Changing the admin authentication mechanism.",
+    "Altering the PDF or video management admin pages beyond category list updates.",
+    "Any new pages or features not listed above."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
